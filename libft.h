@@ -1,6 +1,9 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
+#include <stdlib.h>
+#include <unistd.h>
+
 int		ft_atoi(char *str);
 void	ft_bzero(void *s, size_t n);
 int		ft_isalnum(int c);
