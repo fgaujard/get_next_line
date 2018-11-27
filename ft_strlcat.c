@@ -6,7 +6,7 @@
 /*   By: fgaujard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/13 12:58:20 by fgaujard          #+#    #+#             */
-/*   Updated: 2018/11/22 18:12:43 by fgaujard         ###   ########.fr       */
+/*   Updated: 2018/11/27 16:41:19 by fgaujard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t l)
 	size_t size_src;
 	size_t i;
 
+	i = 0;
 	size_dest = ft_strlen(dest);
 	size_src = ft_strlen(src);
 	if (size_dest >= (l - 1))

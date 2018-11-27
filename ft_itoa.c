@@ -6,12 +6,11 @@
 /*   By: fgaujard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/21 15:47:47 by fgaujard          #+#    #+#             */
-/*   Updated: 2018/11/22 16:27:17 by fgaujard         ###   ########.fr       */
+/*   Updated: 2018/11/27 16:48:55 by fgaujard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static int		ft_count_digit(int n)
 {

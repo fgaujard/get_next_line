@@ -6,22 +6,20 @@
 /*   By: fgaujard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 18:09:16 by fgaujard          #+#    #+#             */
-/*   Updated: 2018/11/21 14:28:56 by fgaujard         ###   ########.fr       */
+/*   Updated: 2018/11/27 18:11:40 by fgaujard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	size_t	i;
-	int		*tab;
+	size_t			i;
+	unsigned char	*tab;
 
 	i = 0;
-	tab = (int *)b;
+	tab = (unsigned char *)b;
 	while (i < len)
-		tab[i++] = c;
+		tab[i++] = (unsigned char)c;
 	return (b);
 }

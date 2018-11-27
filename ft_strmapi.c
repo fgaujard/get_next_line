@@ -6,7 +6,7 @@
 /*   By: fgaujard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 12:05:37 by fgaujard          #+#    #+#             */
-/*   Updated: 2018/11/19 17:08:31 by fgaujard         ###   ########.fr       */
+/*   Updated: 2018/11/27 18:53:09 by fgaujard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		dest[i] = (*f)(i, s[i]);
 		i++;
 	}
+	dest[i] = '\0';
 	return (dest);
 }
