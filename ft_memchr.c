@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
@@ -25,7 +24,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		if (str[i] != (unsigned char)c)
 			i++;
 		else
-			return (s + i);
+			return ((void *)(str + i));
 	}
 	return (NULL);
 }

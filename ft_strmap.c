@@ -23,6 +23,9 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	if (!(dest = (char *)malloc(sizeof(char) * (size + 1))))
 		return (0);
 	while (s[i] != '\0')
-		dest = (*f)(s[i++]);
+	{
+		dest[i] = (*f)(s[i]);
+		i++;
+	}
 	return (dest);
 }

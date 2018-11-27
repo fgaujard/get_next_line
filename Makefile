@@ -1,5 +1,5 @@
 CC = gcc
-CC_FlAGS = -c
+CC_FLAGS = -c -Wall -Wextra -Werror
 NAME = libft.a
 SRC = *.c
 OBJ = *.o
@@ -7,7 +7,7 @@ OBJ = *.o
 all : $(NAME)
 
 $(NAME) : $(SRC)
-	$(CC) $(SRC) $(CC_FLAGS)
+	$(CC) $(CC_FLAGS) $(SRC)
 	ar rc $(NAME) $(OBJ)
 
 clean :

@@ -15,10 +15,10 @@
 char	*ft_strnew(size_t size)
 {
 	char	*str;
-	int		i;
+	size_t	i;
 
 	i = 0;
-	if (!(str = (char *)malloc(sizof(char) * size)))
+	if (!(str = (char *)malloc(sizeof(char) * size)))
 		return (0);
 	while (i < size)
 		str[i++] = '\0';

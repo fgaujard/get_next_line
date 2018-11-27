@@ -26,7 +26,7 @@ char	*ft_strrchr(const char *s, int c)
 			i++;
 	}
 	if (j != 0)
-		return (&s[j]);
+		return ((char *)(s + j));
 	else
 		return (NULL);
 }
