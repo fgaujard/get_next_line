@@ -3,17 +3,21 @@ CC_FLAGS = -c -Wall -Wextra -Werror
 NAME = libft.a
 SRC = *.c
 OBJ = *.o
+INCLUDES = libft.h
 
-all : $(NAME)
+$(NAME) : $(OBJ)
+	ar rc $@ $(OBJ)
+	ranlib $@
 
-$(NAME) : $(SRC)
+$(OBJ) : $(SRC) $(INCLUDES)
 	$(CC) $(CC_FLAGS) $(SRC)
-	ar rc $(NAME) $(OBJ)
 
 clean :
 	rm -f *.o
 
 fclean : clean
 	rm -f $(NAME)
+
+all : $(NAME)
 
 re : fclean all
