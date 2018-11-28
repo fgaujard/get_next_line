@@ -6,7 +6,7 @@
 /*   By: fgaujard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/10 17:17:27 by fgaujard          #+#    #+#             */
-/*   Updated: 2018/11/27 17:25:47 by fgaujard         ###   ########.fr       */
+/*   Updated: 2018/11/28 16:53:35 by fgaujard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int		ft_strcmp(const char *s1, const char *s2)
 {
-	int i;
-	unsigned char *str1;
-	unsigned char *str2;
+	int				i;
+	unsigned char	*str1;
+	unsigned char	*str2;
 
 	i = 0;
 	str1 = (unsigned char *)s1;
