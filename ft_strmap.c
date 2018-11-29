@@ -6,7 +6,7 @@
 /*   By: fgaujard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 12:04:56 by fgaujard          #+#    #+#             */
-/*   Updated: 2018/11/27 18:52:45 by fgaujard         ###   ########.fr       */
+/*   Updated: 2018/11/29 16:59:20 by fgaujard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	int		size;
 
 	i = 0;
+	if (!s || !f)
+		return (0);
 	size = ft_strlen(s);
 	if (!(dest = (char *)malloc(sizeof(char) * (size + 1))))
 		return (0);

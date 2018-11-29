@@ -6,7 +6,7 @@
 /*   By: fgaujard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 12:13:01 by fgaujard          #+#    #+#             */
-/*   Updated: 2018/11/21 17:42:14 by fgaujard         ###   ########.fr       */
+/*   Updated: 2018/11/29 17:15:37 by fgaujard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,8 @@ char			**ft_strsplit(char const *s, char c)
 	i = 0;
 	j = 0;
 	k = 0;
+	if (!s)
+		return (0);
 	if (!(dest = (char **)malloc(sizeof(char *) * (ft_count_word(s, c) + 1))))
 		return (0);
 	dest[ft_count_word(s, c)] = 0;

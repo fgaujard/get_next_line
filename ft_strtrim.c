@@ -6,7 +6,7 @@
 /*   By: fgaujard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 12:14:46 by fgaujard          #+#    #+#             */
-/*   Updated: 2018/11/28 16:39:15 by fgaujard         ###   ########.fr       */
+/*   Updated: 2018/11/29 18:14:35 by fgaujard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strtrim(char const *s)
 	char	*dest;
 
 	i = 0;
+	if (!s)
+		return (0);
 	j = (ft_strlen(s) - 1);
 	while ((s[i] == '\t' || s[i] == '\n' || s[i] == ' ') && (s[i] != '\0'))
 		i++;

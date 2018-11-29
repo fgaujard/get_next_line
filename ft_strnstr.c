@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgaujard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/12 18:02:24 by fgaujard          #+#    #+#             */
-/*   Updated: 2018/11/28 17:36:57 by fgaujard         ###   ########.fr       */
+/*   Created: 2018/11/29 13:54:07 by fgaujard          #+#    #+#             */
+/*   Updated: 2018/11/29 16:14:18 by fgaujard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,23 @@
 
 char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 {
-	size_t len_str;
-	size_t len_to_find;
 	size_t i;
 	size_t j;
 
 	i = 0;
-	len_str = (size_t)ft_strlen(str);
-	len_to_find = (size_t)ft_strlen(to_find);
-	while ((i < len) && (len < (len_str - len_to_find + 1)))
+	if (!*to_find)
+		return ((char *)str);
+	while (str[i] != '\0')
 	{
 		j = 0;
-		while (j < len_to_find)
+		while (to_find[j] == str[i + j] && (i + j < len))
 		{
-			if (str[i + j] != to_find[j])
-				break ;
+			if (to_find[j + 1] == '\0')
+			{
+				return ((char *)(str + i));
+			}
 			j++;
 		}
-		if (j == len_to_find)
-			return ((char *)(str + i));
 		i++;
 	}
 	return (0);

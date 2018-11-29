@@ -6,7 +6,7 @@
 /*   By: fgaujard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 12:03:09 by fgaujard          #+#    #+#             */
-/*   Updated: 2018/11/19 12:04:18 by fgaujard         ###   ########.fr       */
+/*   Updated: 2018/11/29 17:17:13 by fgaujard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		i;
 	int		j;
 
+	if (!s1 || !s2)
+		return (0);
 	size = (ft_strlen(s1) + ft_strlen(s2));
 	if (!(s3 = (char *)malloc(sizeof(char) * (size + 1))))
 		return (0);
