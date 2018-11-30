@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_tables.c                                  :+:      :+:    :+:   */
+/*   ft_print_words_tables.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgaujard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/22 17:42:07 by fgaujard          #+#    #+#             */
-/*   Updated: 2018/11/22 17:43:23 by fgaujard         ###   ########.fr       */
+/*   Created: 2018/09/17 19:08:03 by fgaujard          #+#    #+#             */
+/*   Updated: 2018/11/30 18:36:58 by fgaujard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_print_tables(char **tab)
+void	ft_print_tables_fd(char **tab, int fd)
 {
 	int i;
 	int j;
@@ -23,10 +23,10 @@ void	ft_print_tables(char **tab)
 		j = 0;
 		while (tab[i][j] != '\0')
 		{
-			ft_putchar(tab[i][j]);
+			ft_putchar_fd(tab[i][j], fd);
 			j++;
 		}
-		ft_putchar('\n');
+		ft_putchar_fd('\n', fd);
 		i++;
 	}
 }

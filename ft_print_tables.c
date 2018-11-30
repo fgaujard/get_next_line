@@ -1,37 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_print_tables.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgaujard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/19 12:14:46 by fgaujard          #+#    #+#             */
-/*   Updated: 2018/11/30 16:52:05 by fgaujard         ###   ########.fr       */
+/*   Created: 2018/11/22 17:42:07 by fgaujard          #+#    #+#             */
+/*   Updated: 2018/11/30 18:31:09 by fgaujard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s)
+void	ft_print_tables(char **tab)
 {
-	int		i;
-	int		j;
-	int		k;
-	char	*dest;
+	int i;
+	int j;
 
 	i = 0;
-	if (!s)
-		return (0);
-	j = (ft_strlen(s) - 1);
-	while ((s[i] == '\t' || s[i] == '\n' || s[i] == ' ') && (s[i] != '\0'))
+	while (tab[i] != 0)
+	{
+		j = 0;
+		while (tab[i][j] != '\0')
+		{
+			ft_putchar(tab[i][j]);
+			j++;
+		}
+		ft_putchar('\n');
 		i++;
-	while ((s[j] == '\t' || s[j] == '\n' || s[j] == ' ') && (j > i))
-		j--;
-	if (!(dest = (char *)malloc(sizeof(char) * (j - i + 1))))
-		return (0);
-	k = 0;
-	while (i <= j)
-		dest[k++] = s[i++];
-	dest[k] = '\0';
-	return (dest);
+	}
 }

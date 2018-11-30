@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free_tables.c                                   :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgaujard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/22 17:43:43 by fgaujard          #+#    #+#             */
-/*   Updated: 2018/11/22 17:43:48 by fgaujard         ###   ########.fr       */
+/*   Created: 2018/11/30 18:04:52 by fgaujard          #+#    #+#             */
+/*   Updated: 2018/11/30 18:06:35 by fgaujard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_free_tables(char **tab)
+void	ft_swap(int *a, int *b)
 {
-	int i;
+	int tmp;
 
-	i = 0;
-	while (tab[i] != 0)
-	{
-		free(tab[i]);
-		tab[i] = NULL;
-	}
-	free(tab);
-	tab = NULL;
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
 }

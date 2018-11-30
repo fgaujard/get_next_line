@@ -6,7 +6,7 @@
 /*   By: fgaujard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/27 16:29:46 by fgaujard          #+#    #+#             */
-/*   Updated: 2018/11/28 17:41:52 by fgaujard         ###   ########.fr       */
+/*   Updated: 2018/11/30 18:45:13 by fgaujard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,5 +83,10 @@ void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 t_list				*ft_lstnew(void const *content, size_t content_size);
+void				ft_free_tables(char **tab);
+void				ft_print_tables(char **tab);
+void				ft_print_tables_fd(char **tab, int fd);
+void				ft_swap(int *a, int *b);
+char				*ft_strlowcase(char *str);
 
 #endif
