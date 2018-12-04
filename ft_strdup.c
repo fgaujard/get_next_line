@@ -6,13 +6,13 @@
 /*   By: fgaujard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/14 10:18:35 by fgaujard          #+#    #+#             */
-/*   Updated: 2018/11/30 19:02:12 by fgaujard         ###   ########.fr       */
+/*   Updated: 2018/12/04 13:53:27 by fgaujard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(char *src)
+char	*ft_strdup(const char *src)
 {
 	int		i;
 	int		size;
