@@ -6,7 +6,7 @@
 /*   By: fgaujard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/17 14:46:14 by fgaujard          #+#    #+#             */
-/*   Updated: 2019/01/09 16:08:07 by fgaujard         ###   ########.fr       */
+/*   Updated: 2019/01/16 16:05:22 by fgaujard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int				get_next_line(int const fd, char **line)
 		{
 			if (ft_strlen(stack) == 0)
 				return (0);
-			stack = ft_strjoin(stack, "\n");
+			stack = ft_strappend(stack, "\n");
 		}
 		if (ret < 0)
 			return (-1);

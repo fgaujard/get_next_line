@@ -6,7 +6,7 @@
 /*   By: fgaujard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/27 16:29:46 by fgaujard          #+#    #+#             */
-/*   Updated: 2018/12/04 17:27:39 by fgaujard         ###   ########.fr       */
+/*   Updated: 2019/01/16 15:10:35 by fgaujard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,5 +88,6 @@ void				ft_print_tables(char **tab);
 void				ft_print_tables_fd(char **tab, int fd);
 void				ft_swap(int *a, int *b);
 char				*ft_strlowcase(char *str);
+char				*ft_strappend(char *s1, char *s2);
 
 #endif

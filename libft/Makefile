@@ -6,7 +6,7 @@
 #    By: fgaujard <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/04 16:26:20 by fgaujard          #+#    #+#              #
-#    Updated: 2019/01/09 15:35:50 by fgaujard         ###   ########.fr        #
+#    Updated: 2019/01/16 15:13:53 by fgaujard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,7 +75,8 @@ SRC = ft_memset.c\
 	ft_print_tables.c\
 	ft_print_tables_fd.c\
 	ft_strlowcase.c\
-	ft_swap.c
+	ft_swap.c\
+	ft_strappend.c
 OBJ = ft_memset.o\
 	ft_bzero.o\
 	ft_memcpy.o\
@@ -138,7 +139,8 @@ OBJ = ft_memset.o\
 	ft_print_tables.o\
 	ft_print_tables_fd.o\
 	ft_strlowcase.o\
-	ft_swap.o
+	ft_swap.o\
+	ft_strappend.o
 INCLUDES = libft.h
 
 $(NAME) : $(OBJ)
