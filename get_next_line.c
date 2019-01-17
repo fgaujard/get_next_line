@@ -6,7 +6,7 @@
 /*   By: fgaujard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/17 14:46:14 by fgaujard          #+#    #+#             */
-/*   Updated: 2019/01/16 16:05:22 by fgaujard         ###   ########.fr       */
+/*   Updated: 2019/01/17 17:02:50 by fgaujard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,14 @@ static int		line_info(int const fd, char **stack)
 {
 	char	*buff;
 	int		ret;
-	char	*temp;
 
-	if (!(buff = (char *)malloc(sizeof(*buff) * (BUFF_SIZE + 1))))
+	if (!(buff = (char *)ft_strnew(sizeof(*buff) * (BUFF_SIZE + 1))))
 		return (-1);
 	ret = read(fd, buff, BUFF_SIZE);
 	if (ret > 0)
 	{
 		buff[ret] = '\0';
-		temp = ft_strjoin(*stack, buff);
-		free(*stack);
-		*stack = temp;
+		*stack = ft_strappend(*stack, buff);
 	}
 	free(buff);
 	return (ret);
@@ -34,11 +31,11 @@ static int		line_info(int const fd, char **stack)
 
 int				get_next_line(int const fd, char **line)
 {
-	static char	*stack = NULL;
+	static char	*stack;
 	char		*endline;
 	int			ret;
 
-	if ((!stack && (stack = (char *)malloc(sizeof(*stack))) == NULL) ||
+	if ((!stack && (stack = (char *)ft_strnew(sizeof(*stack))) == NULL) ||
 			!line || fd < 0 || BUFF_SIZE < 0)
 		return (-1);
 	endline = ft_strchr(stack, '\n');
