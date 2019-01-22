@@ -6,7 +6,7 @@
 /*   By: fgaujard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/17 14:46:14 by fgaujard          #+#    #+#             */
-/*   Updated: 2019/01/17 17:02:50 by fgaujard         ###   ########.fr       */
+/*   Updated: 2019/01/22 13:40:21 by fgaujard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,16 @@ static int		line_info(int const fd, char **stack)
 	}
 	free(buff);
 	return (ret);
+}
+
+static char		save_line(char **line, char **stack, char *endline)
+{
+	*line = ft_strsub(*stack, 0, (ft_strlen(*stack) - ft_strlen(endline)));
+	endline = ft_strdup(endline);
+	ft_strdel(stack);
+	*stack = ft_strdup(endline + 1);
+	free(endline);
+	return (0);
 }
 
 int				get_next_line(int const fd, char **line)
@@ -53,7 +63,6 @@ int				get_next_line(int const fd, char **line)
 		else
 			endline = ft_strchr(stack, '\n');
 	}
-	*line = ft_strsub(stack, 0, (ft_strlen(stack) - ft_strlen(endline)));
-	stack = ft_strdup(endline + 1);
+	save_line(line, &stack, endline);
 	return (1);
 }

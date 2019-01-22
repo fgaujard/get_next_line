@@ -6,7 +6,7 @@
 /*   By: fgaujard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/16 14:52:36 by fgaujard          #+#    #+#             */
-/*   Updated: 2019/01/17 17:02:47 by fgaujard         ###   ########.fr       */
+/*   Updated: 2019/01/22 12:23:05 by fgaujard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,11 @@ char	*ft_strappend(char *s1, char *s2)
 	int		i;
 	int		j;
 
-	if (!s1 || !s2)
+	if (!s1)
+		return (ft_strdup(s2));
+	if (!s2)
+		return (s1);
+	if (!s1 && !s2)
 		return (0);
 	size = (ft_strlen(s1) + ft_strlen(s2));
 	if (!(s3 = (char *)malloc(sizeof(char) * (size + 1))))
